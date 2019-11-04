@@ -1,8 +1,8 @@
-name: "my-website"
+name: "my-poster"
 navbar:
-  title: "My Website"
+  title: "my GH night poster"
   left:
-    - text: "Home"
+    - text: "Poster"
       href: index.html
     - text: "About"
       href: about.html

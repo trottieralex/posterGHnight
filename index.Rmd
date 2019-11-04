@@ -1,5 +1,12 @@
 ---
 title: Improving the long-term impact evaluation of interventions for better family planning use
+
+author:
+  - name: Alexandre Trottier
+  - name: Tibor Schuster
+  - name: Yves Bergevin
+affiliation:
+    address: Department of Family Medicine, McGill University
 ---
 
 ```{r setup, include=FALSE}
@@ -36,9 +43,6 @@ windowsFonts(ArN = windowsFont("Arial Narrow"))
 knitr::include_graphics("Figure5_DHScalendar.png")
 ```
 
-<br>
-<br>
-<br>
 
 # Objectives
 
@@ -53,9 +57,6 @@ Examples of both are shown here studying contracetive use for:
 * Senegal
 * 2005 to 2015
 
-<br>
-<br>
-<br>
 
 # Acknowledgement
 
@@ -169,24 +170,6 @@ for(survs in unique(all_sss$surv)){
 
 ```
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 # 2 - Evaluate change
 
@@ -463,8 +446,6 @@ kable(results,
 
 ```
 
-<br>
-
 # Future work
 
 * Improve and test change detection methods
@@ -476,15 +457,10 @@ kable(results,
 <!-- knitr::write_bib(c('knitr','rmarkdown','posterdown','pagedown'), 'packages.bib') -->
 <!-- ``` -->
 
-<br>
 
 # References
 
-
-<ul style="font-size: 35px">
-  <li>Zeileis et al. (2003). Testing and Dating of Structural Changes in Practice. Computational Statistics & Data Analysis, 44, 109-123.</li>
-  <li>R Core Team (2019). R: A language and environment for statistical computing. R
-  Foundation for Statistical Computing. www.R-project.org/.</li>
-  <li>MacQuarrie et al. 2018. Consistency of Reporting of Terminated Pregnancies in DHS Calendars. DHS Methodological Reports No. 25. Rockville, Maryland, USA: ICF.</li>
-  <li>Bernal et al. (2017). Interrupted time series regression for the evaluation of public health interventions: a tutorial. International Journal of Epidemiology, 46(1), 348-355.</li>
-</ul> 
+* Zeileis et al. (2003). Testing and Dating of Structural Changes in Practice. Computational Statistics & Data Analysis, 44, 109-123.
+* R Core Team (2019). R: A language and environment for statistical computing. R Foundation for Statistical Computing. www.R-project.org/.
+* MacQuarrie et al. 2018. Consistency of Reporting of Terminated Pregnancies in DHS Calendars. DHS Methodological Reports No. 25. Rockville, Maryland, USA: ICF.
+* Bernal et al. (2017). Interrupted time series regression for the evaluation of public health interventions: a tutorial. International Journal of Epidemiology, 46(1), 348-355.

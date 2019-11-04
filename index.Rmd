@@ -39,7 +39,7 @@ windowsFonts(ArN = windowsFont("Arial Narrow"))
   + Funded by the U.S. Agency for International Development (USAID)
 * Many DHS include a section recording reproductive history of women, the **DHS calendar**.
 
-```{r calendar, echo=FALSE, fig.cap="Example of a DHS calendar filled for one year from DHS website. Birth, pregnancy and contraceptive use are coded in column 1 and related events in column 2 for each months.", out.width = '75%', fig.align = "center"}
+```{r calendar, echo=FALSE, fig.cap="Example of a DHS calendar filled for one year from DHS website. Birth, pregnancy and contraceptive use are coded in column 1 and related events in column 2 for each months.", out.width = '85%', fig.align = "center"}
 knitr::include_graphics("Figure5_DHScalendar.png")
 ```
 

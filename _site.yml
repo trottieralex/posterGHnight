@@ -1,6 +1,5 @@
 name: "my-poster"
 navbar:
-  title: "my GH night poster"
   left:
     - text: "Poster"
       href: index.html

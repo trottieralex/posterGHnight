@@ -1,12 +1,12 @@
 ---
 title: Improving the long-term impact evaluation of interventions for better family planning use
+subtitle: Web version of Global Health Night poster (2019-11-05)
 
 author:
   - name: Alexandre Trottier
   - name: Tibor Schuster
   - name: Yves Bergevin
-affiliation:
-    address: Department of Family Medicine, McGill University
+    affiliation: Department of Family Medicine, McGill University
 ---
 
 ```{r setup, include=FALSE}

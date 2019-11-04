@@ -2,4 +2,6 @@
 title: "About This Website"
 ---
 
-More about this website.
+This poster was entirely build in R using posterdown (see https://github.com/brentthorne/posterdown/wiki) to build the poster.
+
+You can find the code for the analysis and the poster <a href="https://github.com/trottieralex/posterGHnight_v4/blob/gh-pages/index.Rmd"> here! </a> 

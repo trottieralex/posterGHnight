@@ -12,7 +12,7 @@
 
 
 
-<title>My Website</title>
+<title>Improving the long-term impact evaluation of interventions for better family planning use</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +23,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -289,12 +290,181 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">My Website</h1>
+<h1 class="title toc-ignore">Improving the long-term impact evaluation of interventions for better family planning use</h1>
 
 </div>
 
 
-<p>Hello, Website!</p>
+<div id="background" class="section level1">
+<h1>Background</h1>
+<ul>
+<li>Maternal and reproductive health globally lags behind.</li>
+<li>200 million women still desire but don’t have access to contraception.</li>
+<li>Better identify and evaluate interventions should help improving family planning use.</li>
+<li>The <strong>Demographic Health Surveys (DHS)</strong> are a crucial source of information:
+<ul>
+<li>Hundreds of surveys in over 90 countries since 1984</li>
+<li>Typically every 5 years</li>
+<li>Reference of health and population database for several low- and middle-income countries</li>
+<li>Funded by the U.S. Agency for International Development (USAID)</li>
+</ul></li>
+<li>Many DHS include a section recording reproductive history of women, the <strong>DHS calendar</strong>.</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="Figure5_DHScalendar.png" alt="Example of a DHS calendar filled for one year from DHS website. Birth, pregnancy and contraceptive use are coded in column 1 and related events in column 2 for each months." width="75%" />
+<p class="caption">
+Example of a DHS calendar filled for one year from DHS website. Birth, pregnancy and contraceptive use are coded in column 1 and related events in column 2 for each months.
+</p>
+</div>
+<p><br> <br> <br></p>
+</div>
+<div id="objectives" class="section level1">
+<h1>Objectives</h1>
+<p>We suggest a time series approach using the DHS calendar to:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Find</strong> historical changes in contraceptive use</li>
+<li><strong>Evaluate</strong> a potential long-term changes by a known intervention</li>
+</ol>
+<p>Examples of both are shown here studying contracetive use for:</p>
+<ul>
+<li>Women between 20 and 40 years old</li>
+<li>Senegal</li>
+<li>2005 to 2015</li>
+</ul>
+<p><br> <br> <br></p>
+</div>
+<div id="acknowledgement" class="section level1">
+<h1>Acknowledgement</h1>
+<p>Dr. Britt McKinnon for her guidance and inspiration for this project.</p>
+<p>Funding for this project comes mostly from a Doctoral scolarship awarded by the Fonds de recherche du Québec - Santé (FRQS).</p>
+</div>
+<div id="finding-changes" class="section level1">
+<h1>1 - Finding changes</h1>
+<p><strong>Method:</strong> change points are identified with the strucchange package in R using an algorithm by Bai and Perron 2003</p>
+<div class="figure" style="text-align: center">
+<img src="index_files/figure-html/orWhereToFindThem-1.png" alt="Historical trend of contraceptive use in Senegal (plain line) with individual months (orange dots) from the calendar section of six consecutive DHS; changepoints detected are shown (vertical dash lines) with uncertainty about when it happened (horizontal red lines, 95% confidence interval)." width="85%" />
+<p class="caption">
+Historical trend of contraceptive use in Senegal (plain line) with individual months (orange dots) from the calendar section of six consecutive DHS; changepoints detected are shown (vertical dash lines) with uncertainty about when it happened (horizontal red lines, 95% confidence interval).
+</p>
+</div>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</div>
+<div id="evaluate-change" class="section level1">
+<h1>2 - Evaluate change</h1>
+<p>Intervention include two radio serial dramas:</p>
+<ul>
+<li>Produced by Population Media Center (PMC) with local partners</li>
+<li><em>Ngelawu Nawet</em> - 168 episodes of 30 minutes in Wolof</li>
+<li><em>Coñal Keele</em> - 58 episodes of 30 minutes in Pulaar</li>
+<li>Both adressed family planning</li>
+<li>Broadcasted from November 2008 to December 2009</li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>Interrupted time-series using main changepoints detected before</li>
+<li>Linear regression to assess change of level and trend</li>
+</ul>
+<div class="figure" style="text-align: center">
+<img src="index_files/figure-html/evaluate-1.png" alt="Evaluation of radio serial dramas using DHS 2011 (A) and DHS 2013 (B) showing monthly values (orange dots), contraceptive use trends (purple plain lines), counterfactuals (purple dashed lines), changepoints (vertical dash lines) and the broadcasting period (green)." width="85%" />
+<p class="caption">
+Evaluation of radio serial dramas using DHS 2011 (A) and DHS 2013 (B) showing monthly values (orange dots), contraceptive use trends (purple plain lines), counterfactuals (purple dashed lines), changepoints (vertical dash lines) and the broadcasting period (green).
+</p>
+</div>
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+Changepoint
+</th>
+<th style="text-align:right;">
+Level (%)
+</th>
+<th style="text-align:right;">
+Trend (% per month)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+DHS 2011
+</td>
+<td style="text-align:left;">
+2009/09
+</td>
+<td style="text-align:right;">
+-0.21
+</td>
+<td style="text-align:right;">
+0.10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+DHS 2013
+</td>
+<td style="text-align:left;">
+2009/04
+</td>
+<td style="text-align:right;">
+0.14
+</td>
+<td style="text-align:right;">
+0.03
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<span style="text-decoration: underline;">Note</span>
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> Level: Punctual increase of the contraceptive use observed at the changepoint
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border: 0;" colspan="100%">
+<sup></sup> Trend: Increase of the slope observed after the changepoint
+</td>
+</tr>
+</tfoot>
+</table>
+<p><br></p>
+</div>
+<div id="future-work" class="section level1">
+<h1>Future work</h1>
+<ul>
+<li>Improve and test change detection methods</li>
+<li>Explore the change points detected</li>
+<li>Use the approach to evaluate other PMC radio serial dramas</li>
+</ul>
+<!-- ```{r, include=FALSE} -->
+<!-- knitr::write_bib(c('knitr','rmarkdown','posterdown','pagedown'), 'packages.bib') -->
+<!-- ``` -->
+<p><br></p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ul style="font-size: 35px">
+<li>
+Zeileis et al. (2003). Testing and Dating of Structural Changes in Practice. Computational Statistics &amp; Data Analysis, 44, 109-123.
+</li>
+<li>
+R Core Team (2019). R: A language and environment for statistical computing. R Foundation for Statistical Computing. www.R-project.org/.
+</li>
+<li>
+MacQuarrie et al. 2018. Consistency of Reporting of Terminated Pregnancies in DHS Calendars. DHS Methodological Reports No. 25. Rockville, Maryland, USA: ICF.
+</li>
+<li>
+Bernal et al. (2017). Interrupted time series regression for the evaluation of public health interventions: a tutorial. International Journal of Epidemiology, 46(1), 348-355.
+</li>
+</ul>
+</div>
 
 
 

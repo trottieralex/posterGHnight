@@ -5,6 +5,8 @@ This is a web version of the poster I made for McGill Global Health Night 2019.
 
 The poster was entirely build in R using posterdown (see https://github.com/brentthorne/posterdown/wiki) to build the poster.
 
-You can find the code for the analysis and the poster <a href="https://github.com/trottieralex/posterGHnight_v4/blob/gh-pages/index.Rmd"> here! </a> 
+You can find the code for the analysis and the poster <a href="https://github.com/trottieralex/posterGHnight_v4/blob/gh-pages/index.Rmd"> here! </a> <br> It mostly use strucchange package and DHScalendR a R package I am developing that is already available.
 
-If you want to discuss about it, feel free to contact me alexandre.trottier2@mail.mcgill.ca
+DHScalendR package: https://github.com/trottieralex/DHScalendR
+
+If you want to discuss about anything related, feel free to contact me alexandre.trottier2@mail.mcgill.ca

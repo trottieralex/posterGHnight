@@ -1,12 +1,19 @@
 ---
 title: Improving the long-term impact evaluation of interventions for better family planning use
-subtitle: Web version of Global Health Night poster (2019-11-05)
+subtitle: Web version of Global Health Night poster 2019
+
+date: 2019-11-05
 
 author:
   - name: Alexandre Trottier
   - name: Tibor Schuster
   - name: Yves Bergevin
     affiliation: Department of Family Medicine, McGill University
+    
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
 ---
 
 ```{r setup, include=FALSE}
@@ -39,7 +46,7 @@ windowsFonts(ArN = windowsFont("Arial Narrow"))
   + Funded by the U.S. Agency for International Development (USAID)
 * Many DHS include a section recording reproductive history of women, the **DHS calendar**.
 
-```{r calendar, echo=FALSE, fig.cap="Example of a DHS calendar filled for one year from DHS website. Birth, pregnancy and contraceptive use are coded in column 1 and related events in column 2 for each months.", out.width = '85%', fig.align = "center"}
+```{r calendar, echo=FALSE, fig.cap="Example of a DHS calendar filled for one year from DHS website. Birth, pregnancy and contraceptive use are coded in column 1 and related events in column 2 for each months.", out.width = '50%', fig.align = "center"}
 knitr::include_graphics("Figure5_DHScalendar.png")
 ```
 
